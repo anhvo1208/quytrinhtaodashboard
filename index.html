@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OQMLB — Quy Trình Tạo Dashboard | HR Analytics Training</title>
+  <meta name="description" content="Hướng dẫn đầy đủ quy trình OQMLB và 4 loại dashboard theo chuẩn quốc tế cho HR Analytics">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+<div class="gradient-bg"></div>
+
+<!-- ── NAVIGATION ── -->
+<nav class="topnav" id="topnav">
+  <div class="container">
+    <span class="logo-text">OQMLB</span>
+    <div class="nav-links">
+      <a href="#process">Quy trình</a>
+      <a href="#dashboards">Dashboard types</a>
+      <a href="#compare">So sánh</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-badge"><span class="dot"></span> HR Analytics Training</div>
+  <h1>Quy Trình Tạo<br><span class="highlight">Dashboard</span></h1>
+  <p class="subtitle">Framework OQMLB giúp xây dựng dashboard theo hướng user-centric — bắt đầu từ người dùng, không phải công cụ</p>
+  <p class="source-tag">Source: Maz The Analyst · Stephen Few · Gartner · BABOK</p>
+  <div class="oqmlb-hero-pills">
+    <a href="#process" class="pill pill-o" onclick="setStep(0)"><span class="letter">O</span> Objective</a>
+    <a href="#process" class="pill pill-q" onclick="setStep(1)"><span class="letter">Q</span> Question</a>
+    <a href="#process" class="pill pill-m" onclick="setStep(2)"><span class="letter">M</span> Metrics</a>
+    <a href="#process" class="pill pill-l" onclick="setStep(3)"><span class="letter">L</span> Layout</a>
+    <a href="#process" class="pill pill-b" onclick="setStep(4)"><span class="letter">B</span> Build</a>
+  </div>
+</section>
+
+<!-- ── OQMLB PROCESS ── -->
+<section id="process">
+  <div class="container">
+    <div class="anim-up">
+      <div class="section-label">Framework</div>
+      <h2 class="section-title">Quy trình <span style="color:var(--cyan)">OQMLB</span></h2>
+      <p class="section-desc">5 bước tuần tự từ xác định mục tiêu đến triển khai. Nhấn vào từng bước để xem chi tiết.</p>
+    </div>
+
+    <div class="process-flow anim-up" id="processFlow">
+      <div class="process-step col-cyan active" onclick="setStep(0)">
+        <div class="step-letter">O</div>
+        <div class="step-name">Objective</div>
+        <div class="step-desc">Mục tiêu & người dùng</div>
+      </div>
+      <div class="process-step col-emerald" onclick="setStep(1)">
+        <div class="step-letter">Q</div>
+        <div class="step-name">Question</div>
+        <div class="step-desc">Câu hỏi cần trả lời</div>
+      </div>
+      <div class="process-step col-amber" onclick="setStep(2)">
+        <div class="step-letter">M</div>
+        <div class="step-name">Metrics</div>
+        <div class="step-desc">Chỉ số đo lường</div>
+      </div>
+      <div class="process-step col-blue" onclick="setStep(3)">
+        <div class="step-letter">L</div>
+        <div class="step-name">Layout</div>
+        <div class="step-desc">Bố cục thiết kế</div>
+      </div>
+      <div class="process-step col-purple" onclick="setStep(4)">
+        <div class="step-letter">B</div>
+        <div class="step-name">Build</div>
+        <div class="step-desc">Xây dựng & triển khai</div>
+      </div>
+    </div>
+
+    <div id="stepDetail" class="anim-up"></div>
+  </div>
+</section>
+
+<!-- ── DASHBOARD TYPES ── -->
+<section id="dashboards">
+  <div class="container">
+    <div class="anim-up">
+      <div class="section-label">Phân loại</div>
+      <h2 class="section-title">4 loại Dashboard <span style="color:var(--purple-light)">chuẩn quốc tế</span></h2>
+      <p class="section-desc">Theo Stephen Few, Gartner và BABOK — mỗi loại phục vụ đối tượng khác nhau, tần suất khác nhau, mục đích khác nhau.</p>
+    </div>
+
+    <div class="dash-grid">
+      <!-- STRATEGIC -->
+      <div class="dash-card dc-strategic anim-up">
+        <div class="dash-card-head">
+          <div class="dc-num">01 — STRATEGIC</div>
+          <h3>Dashboard chiến lược</h3>
+          <p class="dc-sub">Theo dõi mục tiêu dài hạn của tổ chức</p>
+          <div class="dc-user-badge">👤 C-Level / Board</div>
+        </div>
+        <div class="dash-card-body">
+          <div class="dc-section">
+            <h4>Định nghĩa</h4>
+            <p>Tổng hợp tiến độ đạt mục tiêu chiến lược ở mức high-level. Ít chi tiết, cập nhật định kỳ tháng/quý/năm. Giúp lãnh đạo nhìn toàn cảnh và đưa ra quyết định chiến lược.</p>
+          </div>
+          <div class="dc-section">
+            <h4>Khi nào dùng?</h4>
+            <ul class="dc-use-list">
+              <li>Họp ban lãnh đạo, review quý</li>
+              <li>Đánh giá OKR / KPI toàn tổ chức</li>
+              <li>Báo cáo cho cổ đông, hội đồng quản trị</li>
+              <li>Lập kế hoạch chiến lược năm</li>
+            </ul>
+          </div>
+          <div class="dc-section">
+            <h4>Nội dung chính</h4>
+            <div class="dc-tags">
+              <span class="dc-tag">KPI tổng</span>
+              <span class="dc-tag">Goal vs Actual</span>
+              <span class="dc-tag">YoY trend</span>
+              <span class="dc-tag">Scorecard</span>
+              <span class="dc-tag">Forecast</span>
+              <span class="dc-tag">Benchmark</span>
+            </div>
+          </div>
+          <div class="dc-section">
+            <h4>Ví dụ HR</h4>
+            <div class="dc-tags">
+              <span class="dc-tag">Revenue per FTE</span>
+              <span class="dc-tag">Turnover rate YoY</span>
+              <span class="dc-tag">Engagement score</span>
+              <span class="dc-tag">D&I index</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPERATIONAL -->
+      <div class="dash-card dc-operational anim-up">
+        <div class="dash-card-head">
+          <div class="dc-num">02 — OPERATIONAL</div>
+          <h3>Dashboard vận hành</h3>
+          <p class="dc-sub">Giám sát hoạt động real-time</p>
+          <div class="dc-user-badge">👤 Manager / Team Lead</div>
+        </div>
+        <div class="dash-card-body">
+          <div class="dc-section">
+            <h4>Định nghĩa</h4>
+            <p>Giám sát hoạt động hàng ngày và thời gian thực. Phát hiện sự cố, cảnh báo vượt ngưỡng, đảm bảo quy trình vận hành trơn tru. Luôn bật trên màn hình.</p>
+          </div>
+          <div class="dc-section">
+            <h4>Khi nào dùng?</h4>
+            <ul class="dc-use-list">
+              <li>Họp standup / daily check-in</li>
+              <li>Monitor SLA, TAT, queue depth</li>
+              <li>Phát hiện bottleneck real-time</li>
+              <li>Điều phối nhân lực theo ca</li>
+            </ul>
+          </div>
+          <div class="dc-section">
+            <h4>Nội dung chính</h4>
+            <div class="dc-tags">
+              <span class="dc-tag">Live count</span>
+              <span class="dc-tag">Alert flags</span>
+              <span class="dc-tag">SLA countdown</span>
+              <span class="dc-tag">Queue depth</span>
+              <span class="dc-tag">Process health</span>
+              <span class="dc-tag">Auto-refresh</span>
+            </div>
+          </div>
+          <div class="dc-section">
+            <h4>Ví dụ HR</h4>
+            <div class="dc-tags">
+              <span class="dc-tag">Open reqs today</span>
+              <span class="dc-tag">Absent today</span>
+              <span class="dc-tag">Pending approvals</span>
+              <span class="dc-tag">Onboarding status</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANALYTICAL -->
+      <div class="dash-card dc-analytical anim-up">
+        <div class="dash-card-head">
+          <div class="dc-num">03 — ANALYTICAL</div>
+          <h3>Dashboard phân tích</h3>
+          <p class="dc-sub">Khám phá dữ liệu chuyên sâu</p>
+          <div class="dc-user-badge">👤 Analyst / Data Team</div>
+        </div>
+        <div class="dash-card-body">
+          <div class="dc-section">
+            <h4>Định nghĩa</h4>
+            <p>Khám phá dữ liệu chuyên sâu, tìm root cause. Cho phép drill-down, filter, slice-and-dice đa chiều. Phục vụ phân tích ad-hoc và tạo insight mới.</p>
+          </div>
+          <div class="dc-section">
+            <h4>Khi nào dùng?</h4>
+            <ul class="dc-use-list">
+              <li>Điều tra nguyên nhân tăng/giảm đột biến</li>
+              <li>Phân tích segment / cohort</li>
+              <li>Xây dựng insight cho executive report</li>
+              <li>Ad-hoc exploration, what-if analysis</li>
+            </ul>
+          </div>
+          <div class="dc-section">
+            <h4>Nội dung chính</h4>
+            <div class="dc-tags">
+              <span class="dc-tag">Drill-down</span>
+              <span class="dc-tag">Cross-filter</span>
+              <span class="dc-tag">Cohort analysis</span>
+              <span class="dc-tag">Scatter plot</span>
+              <span class="dc-tag">Heatmap</span>
+              <span class="dc-tag">Pareto</span>
+            </div>
+          </div>
+          <div class="dc-section">
+            <h4>Ví dụ HR</h4>
+            <div class="dc-tags">
+              <span class="dc-tag">Turnover by dept/tenure</span>
+              <span class="dc-tag">Engagement drivers</span>
+              <span class="dc-tag">Salary equity</span>
+              <span class="dc-tag">Source effectiveness</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TACTICAL -->
+      <div class="dash-card dc-tactical anim-up">
+        <div class="dash-card-head">
+          <div class="dc-num">04 — TACTICAL</div>
+          <h3>Dashboard chiến thuật</h3>
+          <p class="dc-sub">Theo dõi tiến độ nhóm/dự án</p>
+          <div class="dc-user-badge">👤 Mid-manager / Ops Lead</div>
+        </div>
+        <div class="dash-card-body">
+          <div class="dc-section">
+            <h4>Định nghĩa</h4>
+            <p>Cầu nối giữa Strategic và Operational. Theo dõi tiến độ tuần/tháng, đo lường hiệu suất nhóm/dự án cụ thể để ra quyết định điều chỉnh ngắn hạn.</p>
+          </div>
+          <div class="dc-section">
+            <h4>Khi nào dùng?</h4>
+            <ul class="dc-use-list">
+              <li>Review sprint / dự án hàng tuần</li>
+              <li>Theo dõi campaign / initiative progress</li>
+              <li>So sánh hiệu suất giữa các nhóm</li>
+              <li>Điều chỉnh kế hoạch ngắn hạn</li>
+            </ul>
+          </div>
+          <div class="dc-section">
+            <h4>Nội dung chính</h4>
+            <div class="dc-tags">
+              <span class="dc-tag">Plan vs Actual</span>
+              <span class="dc-tag">Milestone track</span>
+              <span class="dc-tag">Team comparison</span>
+              <span class="dc-tag">WoW variance</span>
+              <span class="dc-tag">Task status</span>
+              <span class="dc-tag">Blockers</span>
+            </div>
+          </div>
+          <div class="dc-section">
+            <h4>Ví dụ HR</h4>
+            <div class="dc-tags">
+              <span class="dc-tag">Hiring plan vs actual</span>
+              <span class="dc-tag">Training completion</span>
+              <span class="dc-tag">Review progress</span>
+              <span class="dc-tag">Attrition forecast</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPARISON TABLE ── -->
+<section id="compare">
+  <div class="container">
+    <div class="anim-up">
+      <div class="section-label">So sánh tổng hợp</div>
+      <h2 class="section-title">Ma trận so sánh <span style="color:var(--amber)">4 loại</span></h2>
+      <p class="section-desc">Bảng tổng hợp giúp bạn nhanh chóng xác định loại dashboard phù hợp cho từng tình huống.</p>
+    </div>
+
+    <div class="compare-wrap anim-up">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Tiêu chí</th>
+            <th class="ct-purple">Strategic</th>
+            <th class="ct-green">Operational</th>
+            <th class="ct-amber">Analytical</th>
+            <th class="ct-coral">Tactical</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Người dùng</td>
+            <td>C-Level, Board</td>
+            <td>Manager, Team Lead</td>
+            <td>Analyst, Data Team</td>
+            <td>Mid-manager, Ops Lead</td>
+          </tr>
+          <tr>
+            <td>Mục đích</td>
+            <td>Theo dõi mục tiêu dài hạn</td>
+            <td>Giám sát real-time</td>
+            <td>Khám phá & root cause</td>
+            <td>Tiến độ nhóm/dự án</td>
+          </tr>
+          <tr>
+            <td>Tần suất cập nhật</td>
+            <td>Tháng / Quý / Năm</td>
+            <td>Real-time / Hàng giờ</td>
+            <td>Ad-hoc / On-demand</td>
+            <td>Tuần / Tháng</td>
+          </tr>
+          <tr>
+            <td>Mức chi tiết</td>
+            <td>High-level tổng quan</td>
+            <td>Chi tiết vận hành</td>
+            <td>Rất chi tiết, drill-down</td>
+            <td>Trung bình, so sánh</td>
+          </tr>
+          <tr>
+            <td>Tương tác</td>
+            <td>Ít — xem snapshot</td>
+            <td>Vừa — cảnh báo, filter cơ bản</td>
+            <td>Nhiều — slice, filter, explore</td>
+            <td>Vừa — filter nhóm, thời gian</td>
+          </tr>
+          <tr>
+            <td>Ví dụ chart</td>
+            <td>Scorecard, KPI card, Trend line</td>
+            <td>Gauge, Status light, Queue bar</td>
+            <td>Scatter, Heatmap, Box plot</td>
+            <td>Bar chart, Bullet chart, Progress</td>
+          </tr>
+          <tr>
+            <td>Ví dụ HR</td>
+            <td>Turnover YoY, Engagement score</td>
+            <td>Absent today, Pending approvals</td>
+            <td>Turnover by reason/dept, Equity</td>
+            <td>Hiring plan vs actual, Training %</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <div class="container">
+    <p><span class="footer-brand">OQMLB</span> Dashboard Framework — Designed for HR Analytics Training</p>
+    <p style="margin-top:6px">Source: Maz The Analyst · Stephen Few · Gartner · BABOK</p>
+  </div>
+</footer>
+
+<script>
+const STEPS = [
+  {
+    letter:'O', name:'Objective', sub:'Xác định mục tiêu và người dùng', colClass:'col-cyan',
+    color:'var(--cyan)',
+    why:'Đây là bước nền tảng — không có mục tiêu rõ ràng, mọi bước sau đều lạc hướng. Dashboard phải phục vụ đúng người đúng việc. Sai ở bước này = build lại từ đầu.',
+    blocks:[
+      {h:'WHY — Dashboard để làm gì?', items:['Theo dõi KPI hàng ngày (Monitoring)','Ra quyết định chiến lược (Decision-making)','Khám phá & phân tích sâu (Analytics)']},
+      {h:'WHO — Ai sẽ sử dụng?', items:['C-Level: CEO, CFO, CHRO — cần tổng quan','Manager: quản lý trực tiếp — cần tiến độ nhóm','Chuyên viên: cần chi tiết vận hành, drill-down']},
+      {h:'Sai lầm thường gặp', items:['Build dashboard trước rồi mới tìm người dùng','Nhầm giữa người yêu cầu và người thực dùng','Không xác định tần suất sử dụng (daily/weekly)']},
+      {h:'Output của bước này', items:['1 câu mô tả mục tiêu rõ ràng, súc tích','Danh sách stakeholder với vai trò cụ thể','Xác định loại dashboard (Strategic/Operational/…)']}
+    ]
+  },
+  {
+    letter:'Q', name:'Question', sub:'Xác định câu hỏi cần trả lời', colClass:'col-emerald',
+    color:'var(--emerald)', formula:true,
+    why:'Câu hỏi là cầu nối giữa mục tiêu trừu tượng và số liệu cụ thể. Một câu hỏi đúng giúp loại bỏ hàng chục metric không cần thiết, tiết kiệm thời gian build.',
+    blocks:[
+      {h:'WHAT — Câu hỏi cốt lõi', items:['Kết hợp WHY + WHO để ra nội dung cần hiển thị','Câu hỏi phải trả lời được bằng dữ liệu','Ưu tiên câu hỏi high-impact trước']},
+      {h:'Mức độ câu hỏi', items:['Tổng quan: xu hướng, tỷ lệ tổng (High-level)','Chi tiết: nguyên nhân, phân tích (Drill-down)','Nâng cao: dự báo, what-if (Predictive)']},
+      {h:'Clarify & verify', items:['Làm rõ yêu cầu với stakeholder trước khi làm','Phân biệt "want" (muốn) vs "need" (cần)','Hỏi ngược: "Bạn sẽ làm gì với con số này?"']},
+      {h:'Ví dụ câu hỏi HR', items:['Vì sao turnover Q3 tăng đột biến?','Phòng ban nào đang thiếu nhân sự nhất?','Tỷ lệ hoàn thành onboarding có đạt target?']}
+    ]
+  },
+  {
+    letter:'M', name:'Metrics', sub:'Chọn chỉ số đo lường', colClass:'col-amber',
+    color:'var(--amber)',
+    why:'Metrics biến câu hỏi thành con số đo được. Chọn sai metric — dashboard hiển thị nhiều nhưng không trả lời được câu hỏi cốt lõi, stakeholder mất tin tưởng.',
+    blocks:[
+      {h:'Nguyên tắc chọn KPI', items:['Gắn trực tiếp với câu hỏi ở bước Q','Đảm bảo SMART (đo được, có mốc thời gian)','Phân loại Leading vs Lagging indicator','Giới hạn 5–7 KPI chính mỗi trang dashboard']},
+      {h:'Leading vs Lagging', items:['Leading: dự báo tương lai (pipeline, engagement…)','Lagging: đo kết quả đã xảy ra (revenue, turnover…)','Dashboard tốt cần cả hai loại để cân bằng']},
+      {h:'Ví dụ HR metrics', items:['Headcount · Turnover rate · Time-to-hire','Cost per hire · Revenue per FTE','Engagement score · Training completion %','Absenteeism rate · Offer acceptance rate']},
+      {h:'Lưu ý quan trọng', items:['Đừng chọn metric chỉ vì dữ liệu có sẵn','Thống nhất định nghĩa metric với stakeholder','Xác định nguồn dữ liệu và tần suất cập nhật']}
+    ]
+  },
+  {
+    letter:'L', name:'Layout', sub:'Thiết kế bố cục dashboard', colClass:'col-blue',
+    color:'var(--blue)',
+    why:'Layout quyết định khả năng đọc hiểu của dashboard. Thông tin đúng nhưng bố cục sai = người dùng bỏ qua insight quan trọng hoặc hiểu sai dữ liệu.',
+    blocks:[
+      {h:'Quy trình thiết kế', items:['a. Xác định biểu đồ cụ thể cho từng metric','b. Quyết định số trang và KPI mỗi trang','c. Vẽ wireframe / sketch layout (tay hoặc Figma)','d. Xác nhận layout với stakeholder trước khi build']},
+      {h:'Best practices', items:['F-pattern: metric quan trọng → góc trái trên','Nhóm thông tin liên quan gần nhau','Dùng white space — đừng nhồi nhét quá nhiều','Nhất quán font, màu, kích thước biểu đồ']},
+      {h:'Chọn đúng chart type', items:['So sánh → Bar / Column chart','Xu hướng theo thời gian → Line chart','Tỷ lệ phần trăm → Donut / Pie (≤5 phần)','Phân phối → Histogram / Box plot']},
+      {h:'Lưu ý UX', items:['Mobile-first nếu stakeholder dùng điện thoại','Tránh quá 3–4 màu chủ đạo trong một trang','Label trực tiếp trên chart, hạn chế legend riêng']}
+    ]
+  },
+  {
+    letter:'B', name:'Build', sub:'Xây dựng và triển khai', colClass:'col-purple',
+    color:'var(--purple-light)',
+    why:'Build là bước biến thiết kế thành sản phẩm thực tế. Thứ tự data pipeline rất quan trọng — không thể build khi data chưa sạch, công thức chưa có.',
+    blocks:[
+      {h:'Data pipeline (đúng thứ tự)', items:['a. Collect — thu thập dữ liệu từ nguồn','b. Clean — xử lý null, duplicate, sai format','c. Measure — tạo công thức, cột tính toán','d. Build — xây dựng visual trên công cụ']},
+      {h:'Tools (đơn giản → nâng cao)', items:['Excel — cơ bản, pivot table, chart tĩnh','Power BI — kết nối data, DAX, interactive','Tableau — mạnh về viz, drag-and-drop','Looker — enterprise, SQL-based, Google Cloud']},
+      {h:'Sau khi build', items:['Review dashboard với stakeholder (UAT)','Test tất cả filter và drill-down hoạt động','Đặt lịch auto-refresh dữ liệu','Viết document hướng dẫn sử dụng ngắn gọn']},
+      {h:'Lỗi thường gặp', items:['Build trước khi data sạch → số liệu sai','Thiếu filter → stakeholder không tự dùng được','Không test trên dữ liệu thực tế → crash','Quên xin quyền truy cập dữ liệu nguồn']}
+    ]
+  }
+];
+
+let currentStep = 0;
+
+function setStep(i) {
+  if (i < 0 || i > 4) return;
+  currentStep = i;
+  document.querySelectorAll('.process-step').forEach((el, j) => el.classList.toggle('active', j === i));
+  renderDetail();
+}
+
+function renderDetail() {
+  const s = STEPS[currentStep];
+  const el = document.getElementById('stepDetail');
+
+  let blocksHTML = s.blocks.map(b =>
+    `<div class="detail-block"><h4>${b.h}</h4><ul>${b.items.map(it => `<li>${it}</li>`).join('')}</ul></div>`
+  ).join('');
+
+  let formulaHTML = '';
+  if (s.formula) {
+    formulaHTML = `<div class="formula-bar">
+      <span class="fm-pill" style="background:rgba(0,229,255,0.1);color:var(--cyan);border:1px solid rgba(0,229,255,0.3)">WHY (mục đích)</span>
+      <span class="fm-op">+</span>
+      <span class="fm-pill" style="background:rgba(52,211,153,0.1);color:var(--emerald);border:1px solid rgba(52,211,153,0.3)">WHO (người dùng)</span>
+      <span class="fm-op">→</span>
+      <span class="fm-pill" style="background:${s.color};color:#000;border:1px solid ${s.color};font-weight:700">WHAT (nội dung)</span>
+    </div>`;
+  }
+
+  el.innerHTML = `<div class="step-detail ${s.colClass}" style="animation:fadeUp .4s ease">
+    <div class="step-detail-header">
+      <div class="big-letter" style="color:${s.color}">${s.letter}</div>
+      <div class="info">
+        <h3>${s.name}</h3>
+        <p>${s.sub}</p>
+      </div>
+      <span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--text-dim);border:1px solid var(--glass-border);padding:5px 14px;border-radius:20px">Bước ${currentStep + 1} / 5</span>
+    </div>
+    <div class="step-why">💡 ${s.why}</div>
+    <div class="step-detail-grid">
+      ${blocksHTML}
+      ${formulaHTML}
+    </div>
+    <div style="display:flex;justify-content:space-between;padding:14px 28px;border-top:1px solid var(--glass-border)">
+      <button onclick="setStep(${currentStep - 1})" style="font-family:var(--font-mono);font-size:12px;background:transparent;border:1px solid var(--glass-border);color:var(--text-muted);padding:8px 18px;border-radius:8px;cursor:pointer;${currentStep === 0 ? 'opacity:0.3;pointer-events:none' : ''}" ${currentStep === 0 ? 'disabled' : ''}>← Bước trước</button>
+      <button onclick="setStep(${currentStep + 1})" style="font-family:var(--font-mono);font-size:12px;background:transparent;border:1px solid var(--glass-border);color:var(--text-muted);padding:8px 18px;border-radius:8px;cursor:pointer;${currentStep === 4 ? 'opacity:0.3;pointer-events:none' : ''}" ${currentStep === 4 ? 'disabled' : ''}>Bước tiếp →</button>
+    </div>
+  </div>`;
+}
+
+// Scroll observer
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.anim-up').forEach(el => obs.observe(el));
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('topnav').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Keyboard nav
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') setStep(currentStep + 1);
+  if (e.key === 'ArrowLeft') setStep(currentStep - 1);
+});
+
+// Initial render
+renderDetail();
+</script>
+</body>
+</html>
